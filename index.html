@@ -15,6 +15,19 @@
                 <input type="text" id="patientName" name="patientName" required>
             </div>
             <div class="form-group">
+                <label for="patientAge">Patient Age:</label>
+                <input type="number" id="patientAge" name="patientAge" required>
+            </div>
+            <div class="form-group">
+                <label for="patientGender">Patient Gender:</label>
+                <select id="patientGender" name="patientGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="serviceType">Service Type:</label>
                 <select id="serviceType" name="serviceType" required>
                     <option value="">Select Service Type</option>
@@ -24,8 +37,18 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="">Select Room Type</option>
+                    <option value="general">General Ward</option>
+                    <option value="semiPrivate">Semi-Private Room</option>
+                    <option value="private">Private Room</option>
+                    <option value="icu">ICU</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="duration">Duration of Stay (Days):</label>
-                <input type="number" id="duration" name="duration" min="1">
+                <input type="number" id="duration" name="duration" min="1" required>
             </div>
             <div class="form-group">
                 <label for="procedures">Procedures (if any):</label>
@@ -35,10 +58,18 @@
                 <label for="medications">Medications (if any):</label>
                 <textarea id="medications" name="medications" rows="4"></textarea>
             </div>
+            <div class="form-group">
+                <label for="insurance">Insurance Provider:</label>
+                <input type="text" id="insurance" name="insurance">
+            </div>
+            <div class="form-group">
+                <label for="insuranceCoverage">Insurance Coverage (%):</label>
+                <input type="number" id="insuranceCoverage" name="insuranceCoverage" min="0" max="100" step="1">
+            </div>
             <button type="submit">Estimate Bill</button>
         </form>
         <div id="billEstimation">
-          Get well soon.
+            <!-- Estimated bill details will be displayed here -->
         </div>
     </div>
 </body>
