@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Bill Estimation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Bill Estimation</h1>
+        <form id="billForm">
+            <div class="form-group">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" name="patientName" required>
+            </div>
+            <div class="form-group">
+                <label for="serviceType">Service Type:</label>
+                <select id="serviceType" name="serviceType" required>
+                    <option value="">Select Service Type</option>
+                    <option value="inpatient">Inpatient</option>
+                    <option value="outpatient">Outpatient</option>
+                    <option value="emergency">Emergency</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration of Stay (Days):</label>
+                <input type="number" id="duration" name="duration" min="1">
+            </div>
+            <div class="form-group">
+                <label for="procedures">Procedures (if any):</label>
+                <textarea id="procedures" name="procedures" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medications">Medications (if any):</label>
+                <textarea id="medications" name="medications" rows="4"></textarea>
+            </div>
+            <button type="submit">Estimate Bill</button>
+        </form>
+        <div id="billEstimation">
+          Get well soon.
+        </div>
+    </div>
+</body>
+</html>
